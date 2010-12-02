@@ -10,18 +10,18 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Bittencourt"]
   s.date = %q{2010-12-02}
-  s.description = %q{The HEAD section is the worst place to load scripts. It's painfully slow. The more and the bigger the worse it gets. Move scrips to the bottom and you run into dependency issues and you cannot safely use HTML5 and CSS3. Enter Head JS. A compact solution to these universal issues. This gem adds a helper and generator to facilitate the use of Head JS in your Rails 3 projects the same way you would normally add javascript tags using Rails default helpers.}
+  s.description = %q{This gem adds a helper and generator to facilitate the use of Head JS in your Rails 3 projects the same way you would normally add javascript tags using Rails default helpers.}
   s.email = %q{muitocomplicado@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "headjs-rails.gemspec",
@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/public/javascripts/jquery.js",
     "test/public/javascripts/rails.js",
+    "test/test_generator.rb",
     "test/test_tag_helper.rb"
   ]
   s.homepage = %q{http://github.com/muitocomplicado/headjs-rails}
@@ -40,6 +41,7 @@ Gem::Specification.new do |s|
   s.summary = %q{Provides Rails 3 helper and generator for adding Head JS support.}
   s.test_files = [
     "test/helper.rb",
+    "test/test_generator.rb",
     "test/test_tag_helper.rb"
   ]
 
