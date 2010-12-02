@@ -16,13 +16,9 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/muitocomplicado/headjs-rails"
   gem.license = "MIT"
   gem.summary = %Q{Provides Rails 3 helper and generator for adding Head JS support.}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{The HEAD section is the worst place to load scripts. It's painfully slow. The more and the bigger the worse it gets. Move scrips to the bottom and you run into dependency issues and you cannot safely use HTML5 and CSS3. Enter Head JS. A compact solution to these universal issues. This gem adds a helper and generator to facilitate the use of Head JS in your Rails 3 projects the same way you would normally add javascript tags using Rails default helpers.}
   gem.email = "muitocomplicado@gmail.com"
   gem.authors = ["David Bittencourt"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
