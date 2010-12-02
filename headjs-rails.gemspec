@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "headjs-rails.gemspec",
     "lib/generators/headjs/install/install_generator.rb",
     "lib/headjs-rails.rb",
     "lib/headjs-rails/tag_helper.rb",
