@@ -14,5 +14,6 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rails/all'
 require 'shoulda'
 require 'rails/test_help'
+require 'rails/generators'
 require 'headjs-rails'
 
