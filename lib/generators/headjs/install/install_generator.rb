@@ -1,4 +1,4 @@
-module HeadjsRails
+module Headjs
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
       desc "This generator downloads and installs Head JS"

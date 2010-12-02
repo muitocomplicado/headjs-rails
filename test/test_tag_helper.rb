@@ -1,6 +1,6 @@
 require 'helper'
 
-module HeadjsRails
+module Headjs
   
   class TagHelperTest < Test::Unit::TestCase
     

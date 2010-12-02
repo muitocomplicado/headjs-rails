@@ -1,4 +1,4 @@
-module HeadjsRails
+module Headjs
   
   module TagHelper
 
