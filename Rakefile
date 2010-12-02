@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/muitocomplicado/headjs-rails"
   gem.license = "MIT"
   gem.summary = %Q{Provides Rails 3 helper and generator for adding Head JS support.}
-  gem.description = %Q{The HEAD section is the worst place to load scripts. It's painfully slow. The more and the bigger the worse it gets. Move scrips to the bottom and you run into dependency issues and you cannot safely use HTML5 and CSS3. Enter Head JS. A compact solution to these universal issues. This gem adds a helper and generator to facilitate the use of Head JS in your Rails 3 projects the same way you would normally add javascript tags using Rails default helpers.}
+  gem.description = %Q{This gem adds a helper and generator to facilitate the use of Head JS in your Rails 3 projects the same way you would normally add javascript tags using Rails default helpers.}
   gem.email = "muitocomplicado@gmail.com"
   gem.authors = ["David Bittencourt"]
 end
