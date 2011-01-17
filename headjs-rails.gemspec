@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{headjs-rails}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Bittencourt"]
-  s.date = %q{2010-12-07}
+  s.date = %q{2011-01-17}
   s.description = %q{This gem adds a helper and generator to facilitate the use of Head JS in your Rails 3 projects the same way you would normally add javascript tags using Rails default helpers.}
   s.email = %q{muitocomplicado@gmail.com}
   s.extra_rdoc_files = [
