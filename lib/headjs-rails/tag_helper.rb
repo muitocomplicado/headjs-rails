@@ -11,7 +11,13 @@ module Headjs
     def headjs_include_js(*sources)
       keys = []
       "head.js( #{javascript_include_tag(*sources).scan(/src="([^"]+)"/).flatten.map { |src| 
-        key = URI.parse(src).path[%r{[^/]+\z}].gsub(/\.js$/,'').gsub(/\.min$/,'')
+        key = 
+          URI.
+            parse(src).
+            path[%r{[^/]+\z}].
+            gsub(/\.js$/,'').
+            gsub(/\.min$/,'').
+            gsub(/-[0-9a-f]{32}$/,'')
         while keys.include?(key) do
           key += '_' + key
         end
