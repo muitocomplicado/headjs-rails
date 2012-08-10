@@ -23,7 +23,7 @@ module Headjs
         end
         keys << key
         "{ '#{key}': '#{src}' }"
-      }.join(', ')} );"
+      }.join(', ')} );".html_safe
     end
 
   end
