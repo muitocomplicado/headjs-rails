@@ -9,21 +9,28 @@ module Headjs
     end
 
     def headjs_include_js(*sources)
+      "head.js( #{headjs_include_params(*sources)} );".html_safe
+    end
+
+    def headjs_include_params(*sources)
       keys = []
-      "head.js( #{javascript_include_tag(*sources).scan(/src="([^"]+)"/).flatten.map { |src| 
-        key = 
-          URI.
+      javascript_include_tag(*sources).
+        scan(/src="([^"]+)"/).
+        flatten.
+        map do |src| 
+          key = 
+            URI.
             parse(src).
             path[%r{[^/]+\z}].
             gsub(/\.js$/,'').
             gsub(/\.min$/,'').
             gsub(/-[0-9a-f]{32}$/,'')
-        while keys.include?(key) do
-          key += '_' + key
-        end
-        keys << key
-        "{ '#{key}': '#{src}' }"
-      }.join(', ')} );".html_safe
+          while keys.include?(key) do
+            key += '_' + key
+          end
+          keys << key
+          "{ '#{key}': '#{src}' }"
+        end.join(', ').html_safe
     end
 
   end
