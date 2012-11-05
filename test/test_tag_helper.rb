@@ -69,6 +69,13 @@ module Headjs
         assert_equal @helpers.headjs_include_tag(:defaults), "<script type=\"text/javascript\">head.js( { 'jquery': '/javascripts/jquery.js?#{ENV["RAILS_ASSET_ID"]}' }, { 'rails': '/javascripts/rails.js?#{ENV["RAILS_ASSET_ID"]}' } );</script>"
       end
       
+      should "remove rails asset hashes" do
+        assert_equal(
+          @helpers.headjs_include_tag('/assets/foo-f1d2d2f924e986ac86fdf7b36c94bcdf.js'), 
+          "<script type=\"text/javascript\">head.js( { 'foo': '/assets/foo-f1d2d2f924e986ac86fdf7b36c94bcdf.js' } );</script>"
+        )
+      end
+      
     end
     
   end
