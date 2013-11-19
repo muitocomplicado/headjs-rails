@@ -18,7 +18,8 @@ module Headjs
         scan(/src="([^"]+)"/).
         flatten.
         map do |src| 
-          key = 
+          cnt = 0
+          key = original_key = 
             URI.
             parse(src).
             path[%r{[^/]+\z}].
@@ -26,7 +27,7 @@ module Headjs
             gsub(/\.min$/,'').
             gsub(/-[0-9a-f]{32}$/,'')
           while keys.include?(key) do
-            key += '_' + key
+            key = "#{original_key}_#{(cnt = cnt.succ)}"
           end
           keys << key
           "{ '#{key}': '#{src}' }"

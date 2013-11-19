@@ -34,8 +34,8 @@ module Headjs
         assert_equal "<script type=\"text/javascript\">head.js( { 'jquery': '#{jquery}' } );</script>", @helpers.headjs_include_tag(jquery)
       end
       
-      should "concatenate labels to avoid overwriting (not that great)" do
-        assert_equal "<script type=\"text/javascript\">head.js( { 'comments': '/javascripts/products/comments.js' }, { 'comments_comments': '/javascripts/reviews/comments.js' } );</script>", @helpers.headjs_include_tag('products/comments', 'reviews/comments')
+      should "increase label counter to avoid overwriting" do
+        assert_equal "<script type=\"text/javascript\">head.js( { 'comments': '/javascripts/products/comments.js' }, { 'comments_1': '/javascripts/reviews/comments.js' } );</script>", @helpers.headjs_include_tag('products/comments', 'reviews/comments')
       end
       
       should "accept strings for local paths" do
