@@ -8,14 +8,14 @@ class Headjs::Generators::InstallGeneratorTest < Rails::Generators::TestCase
   
   context 'the Head JS install generator' do
     
-    should 'download the default master Head JS files' do
+    should 'download the default 1.0.0 files' do
       run_generator %w(headjs:install)
       assert_file 'public/javascripts/head.js'
       assert_file 'public/javascripts/head.min.js'
     end
     
-    should 'download the versioned Head JS files' do
-      run_generator %w(headjs:install --version master)
+    should 'download version 0.99 files' do
+      run_generator %w(headjs:install --version 0.99)
       assert_file 'public/javascripts/head.js'
       assert_file 'public/javascripts/head.min.js'
     end

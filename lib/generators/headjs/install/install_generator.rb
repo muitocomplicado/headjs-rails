@@ -10,9 +10,9 @@ module Headjs
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
       desc "This generator downloads and installs Head JS"
-      class_option :version, :type => :string, :default => "master", :desc => "Which version of Head JS to fetch"
-      @@default_version = "master"
-      @@dist_url = "https://github.com/headjs/headjs/raw/{version}/dist/{file}"
+      class_option :version, :type => :string, :default => "1.0.0", :desc => "Which version of Head JS to fetch"
+      @@default_version = "1.0.0"
+      @@dist_url = "https://raw.github.com/headjs/headjs/master/dist/{version}/{file}"
 
       def remove_headjs
         %w(head.js head.min.js).each do |js|

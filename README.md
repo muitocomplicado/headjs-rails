@@ -35,7 +35,7 @@ I also suggest you take a look at the [smurf gem](https://github.com/thumblemonk
 
 ## Testing
 
-Clone the repo, run `bundle install` and `rake test`.
+Clone the repo, run `bundle install` and `bundle exec rake test`.
 
 ## Contributing to headjs-rails
 
