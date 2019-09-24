@@ -3,7 +3,7 @@ module Headjs
   module TagHelper
 
     def headjs_include_tag(*sources)
-      content_tag :script, { :type => Mime::JS }, false do
+      content_tag :script, { :type => Mime[:js] }, false do
         headjs_include_js(*sources)
       end
     end
